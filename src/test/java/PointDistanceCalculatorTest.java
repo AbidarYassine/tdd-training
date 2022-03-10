@@ -1,15 +1,19 @@
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+import point.Point;
+import point.PointDistanceCalculator;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PointDistanceCalculatorTest {
 
     @Test
-    public void calculateDistanceShouldReturn0WhenPointsAreIdentical(){
+    public void calculateDistanceShouldReturn0WhenPointsAreIdentical() {
         Point a = new Point(0, 1);
         Point b = new Point(0, 1);
 
         Double result = PointDistanceCalculator.calculateDistance(a, b);
-        Assert.assertEquals(Double.valueOf(0.0), result);
+        assertEquals(Double.valueOf(0.0), result);
     }
 
     @Test
@@ -19,7 +23,7 @@ public class PointDistanceCalculatorTest {
 
         Double result = PointDistanceCalculator.calculateDistance(a, b);
 
-        Assert.assertEquals(Double.valueOf(3), result);
+        assertEquals(Double.valueOf(3), result);
     }
 
     @Test
@@ -29,7 +33,7 @@ public class PointDistanceCalculatorTest {
 
         Double result = PointDistanceCalculator.calculateDistance(a, b);
 
-        Assert.assertEquals(Double.valueOf(3), result);
+        assertEquals(Double.valueOf(3), result);
     }
 
     @Test
@@ -39,7 +43,7 @@ public class PointDistanceCalculatorTest {
 
         Double result = PointDistanceCalculator.calculateDistance(a, b);
 
-        Assert.assertEquals(Double.valueOf(3), result);
+        assertEquals(Double.valueOf(3), result);
     }
 
     @Test
@@ -49,7 +53,7 @@ public class PointDistanceCalculatorTest {
 
         Double result = PointDistanceCalculator.calculateDistance(a, b);
 
-        Assert.assertEquals(Double.valueOf(1), result);
+        assertEquals(Double.valueOf(1), result);
     }
 
     @Test
@@ -59,7 +63,7 @@ public class PointDistanceCalculatorTest {
 
         Double result = PointDistanceCalculator.calculateDistance(a, b);
 
-        Assert.assertEquals(Double.valueOf(2), result);
+        assertEquals(Double.valueOf(2), result);
     }
 
 }

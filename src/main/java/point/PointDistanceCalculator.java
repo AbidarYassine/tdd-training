@@ -1,3 +1,4 @@
+package point;
 
 public class PointDistanceCalculator {
 

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Poin-Test-Training" />
+        <module name="tdd-training" />
       </profile>
     </annotationProcessing>
   </component>
