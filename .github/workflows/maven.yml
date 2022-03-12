@@ -5,7 +5,7 @@
 name: Demo Github Actions
 on:
   push:
-    branches: [main]
+    branches: [step-13-refactoring-optimization]
 
 jobs:
   build:
