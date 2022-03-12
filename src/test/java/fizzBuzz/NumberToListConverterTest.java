@@ -33,9 +33,15 @@ class NumberToListConverterTest {
     }
 
     @Test
-    void shouldReturnListContains1WhenInputIs5() {
+    void shouldReturnListContains12345WhenInputIs5() {
         List<Integer> result = NumberToListConverter.convert(5);
-        assertEquals(List.of(1,2,3,4,5), result);
+        assertEquals(List.of(1, 2, 3, 4, 5), result);
+    }
+
+    @Test
+    void shouldReturnListContains1to10WhenInputIs10() {
+        List<Integer> result = NumberToListConverter.convert(10);
+        assertEquals(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), result);
     }
 
 }
