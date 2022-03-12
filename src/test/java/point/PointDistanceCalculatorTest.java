@@ -1,12 +1,12 @@
+package point;
+
 import org.junit.Assert;
 import org.junit.Test;
-import point.Point;
-import point.PointDistanceCalculator;
 
 public class PointDistanceCalculatorTest {
 
     @Test
-    public void calculateDistanceShouldReturn0WhenPointsAreIdentical(){
+    public void calculateDistanceShouldReturn0WhenPointsAreIdentical() {
         Point a = new Point(0, 1);
         Point b = new Point(0, 1);
 

@@ -1,58 +1,37 @@
 package fizzBuzz;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FizzBuzzConverterTest {
 
-
-    @Test
-    void shouldReturnFizzWhenInputIs3(){
-        FizzBuzzConverter fizzBuzzConverter=new FizzBuzzConverter();
-        String result=fizzBuzzConverter.convert(3);
-        assertEquals("Fizz",result);
-    }
-
-    @Test
-    void shouldReturnBuzzWhenInputIs5(){
-        FizzBuzzConverter fizzBuzzConverter=new FizzBuzzConverter();
-        String result=fizzBuzzConverter.convert(5);
-        assertEquals("Buzz",result);
-    }
-
-    @Test
-    void shouldReturnFizzBuzzWhenInputIs15(){
-        FizzBuzzConverter fizzBuzzConverter=new FizzBuzzConverter();
-        String result=fizzBuzzConverter.convert(15);
-        assertEquals("FizzBuzz",result);
-    }
-
-    @Test
-    void shouldReturnFizzWhenInputIsMultipleOf3(){
-        FizzBuzzConverter fizzBuzzConverter=new FizzBuzzConverter();
-        String result = fizzBuzzConverter.convert(6);
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6, 9})
+    void shouldReturnFizzWhenInputIs3AndWhenInputIsMultipleOf3(int number) {
+        String result = FizzBuzzConverter.convert(number);
         assertEquals("Fizz", result);
     }
 
-    @Test
-    void shouldReturnFizzBuzzWhenInputIsMultipleOf15() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        String result = fizzBuzzConverter.convert(30);
+    @ParameterizedTest
+    @ValueSource(ints = {5, 55})
+    void shouldReturnFizzWhenInputIs5AndWhenInputIsMultipleOf5(int number) {
+        String result = FizzBuzzConverter.convert(number);
+        assertEquals("Buzz", result);
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {15, 30})
+    void shouldReturnFizzWhenInputIs15AndWhenInputIsMultipleOf15(int number) {
+        String result = FizzBuzzConverter.convert(number);
         assertEquals("FizzBuzz", result);
     }
 
     @Test
-    void shouldReturnFizzBuzzWhenInputIsMultipleOf5() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        String result = fizzBuzzConverter.convert(10);
-        assertEquals("Buzz", result);
-    }
-
-    @Test
     void shouldReturnNumberWhenInputIsNormalNumber() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        String result = fizzBuzzConverter.convert(1);
+        String result = FizzBuzzConverter.convert(1);
         assertEquals("1", result);
     }
 
