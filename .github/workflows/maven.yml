@@ -25,3 +25,5 @@ jobs:
         run: mvn verify
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
+        with:
+            token: ${{ secrets.SECRET_TOKEN_CODE_COV }}
