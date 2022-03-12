@@ -2,7 +2,7 @@ package fizzBuzz;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FizzBuzzConverterTest {
 
@@ -31,19 +31,30 @@ class FizzBuzzConverterTest {
     @Test
     void shouldReturnFizzWhenInputIsMultipleOf3(){
         FizzBuzzConverter fizzBuzzConverter=new FizzBuzzConverter();
-        String result=fizzBuzzConverter.convert(6);
-        assertEquals("Fizz",result);
+        String result = fizzBuzzConverter.convert(6);
+        assertEquals("Fizz", result);
     }
 
     @Test
-    void shouldReturnFizzBuzzWhenInputIsMultipleOf15(){
-        FizzBuzzConverter fizzBuzzConverter=new FizzBuzzConverter();
-        String result=fizzBuzzConverter.convert(30);
-        assertEquals("FizzBuzz",result);
+    void shouldReturnFizzBuzzWhenInputIsMultipleOf15() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        String result = fizzBuzzConverter.convert(30);
+        assertEquals("FizzBuzz", result);
     }
 
+    @Test
+    void shouldReturnFizzBuzzWhenInputIsMultipleOf5() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        String result = fizzBuzzConverter.convert(10);
+        assertEquals("Buzz", result);
+    }
 
-
+    @Test
+    void shouldReturnNumberWhenInputIsNormalNumber() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        String result = fizzBuzzConverter.convert(1);
+        assertEquals("1", result);
+    }
 
 
 }
