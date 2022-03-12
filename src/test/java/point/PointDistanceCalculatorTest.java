@@ -1,9 +1,11 @@
+package point;
+
 
 import org.junit.jupiter.api.Test;
-import point.Point;
-import point.PointDistanceCalculator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
 
 public class PointDistanceCalculatorTest {
 
